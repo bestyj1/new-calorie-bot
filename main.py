@@ -84,7 +84,7 @@ def get_total_deficit(user_id):
 
 def analyze_text(text):
     resp = claude.messages.create(
-        model="claude-sonnet-4-5-20251001",
+        model="claude-haiku-4-5-20251001",
         max_tokens=400,
         messages=[{
             "role": "user",
@@ -102,7 +102,7 @@ def analyze_text(text):
 def analyze_image(image_bytes, mime="image/jpeg"):
     b64 = base64.standard_b64encode(image_bytes).decode()
     resp = claude.messages.create(
-        model="claude-sonnet-4-5-20251001",
+        model="claude-haiku-4-5-20251001",
         max_tokens=400,
         messages=[{
             "role": "user",
@@ -117,7 +117,7 @@ def analyze_image(image_bytes, mime="image/jpeg"):
 
 def suggest_diet(ingredients):
     resp = claude.messages.create(
-        model="claude-sonnet-4-5-20251001",
+        model="claude-haiku-4-5-20251001",
         max_tokens=800,
         messages=[{
             "role": "user",
